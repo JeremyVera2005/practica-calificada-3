@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inteligencia Artificial</title>
+        <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0 20px 40px;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* Navbar */
+        nav {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: #fffde7;
+        }
+
+        /* Contenedor principal */
+        main {
+            max-width: 900px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        /* Contenedor imagen con hover */
+        .imagen-hover {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(30, 87, 153, 0.3);
+            cursor: pointer;
+            background: white;
+        }
+
+        .imagen-hover img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .imagen-hover:hover img {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 87, 153, 0.75);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .imagen-hover:hover .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .overlay h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(0,0,0,0.7);
+            margin: 0;
+        }
+
+        /* Descripción */
+        .descripcion {
+            margin-top: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav a {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+            }
+            .imagen-hover {
+                max-width: 100%;
+            }
+            .descripcion {
+                padding: 0 10px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inteligencia Artificial</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="historia.html">¿Qué es IA?</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="imagen-hover">
+            <img src="img/aplicacion-seguimiento-salud-estado-fisico-persona-que-sostiene_1326100-4554.avif" alt="Historia de la IA" />
+            <div class="overlay">
+                <h3>Historia de la IA</h3>
+            </div>
+        </div>
+
+        <main class="contenido">
+        <article>
+            <h2>¿Qué es la Inteligencia Artificial?</h2>
+            <p>
+                La inteligencia artificial (IA) es una rama de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. 
+                Estas tareas incluyen el aprendizaje automático, el reconocimiento de voz, la toma de decisiones y la comprensión del lenguaje natural.
+            </p>
+            <p>
+                La IA está transformando industrias enteras, desde la medicina y la agricultura hasta la automoción y la educación, impulsando innovaciones que mejoran la eficiencia y la calidad de vida.
+            </p>
+            <h3>Aplicaciones comunes de la IA</h3>
+            <ul>
+                <li><strong>Asistentes virtuales:</strong> Siri, Alexa y Google Assistant.</li>
+                <li><strong>Diagnóstico médico:</strong> Sistemas que ayudan a detectar enfermedades.</li>
+                <li><strong>Automóviles autónomos:</strong> Vehículos que se conducen solos con inteligencia artificial.</li>
+                <li><strong>Análisis de datos:</strong> Descubrir patrones y predicciones en grandes volúmenes de información.</li>
+            </ul>
+        </article>
+
+
+    </main>
+     </main>
+
+    <footer>
+        <p>Diseñado por: Ashton Patrick Jeremy Vera Jara | Código: U22217157</p>
+    </footer>
+</body>
+</html>
