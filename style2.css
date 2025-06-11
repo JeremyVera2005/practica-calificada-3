@@ -1,0 +1,208 @@
+/* Compatibilidad básica */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* ====== Header con gradiente compatible ====== */
+/* Gradientes compatibles */
+header {
+    background: #1e5799; /* Fallback */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Saf4+, Chrome */
+    background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+    background: -o-linear-gradient(top, #1e5799, #7db9e8); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%); /* Standard */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+
+/* ====== Navbar mejorada ====== */
+nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe;
+}
+
+
+
+/* Bordes redondeados */
+article {
+    background: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px; /* Safari */
+    -moz-border-radius: 10px; /* Firefox */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* ====== Contenedor proyectos - flexbox horizontal con scroll ====== */
+.PROYECTOS {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;               /* sin salto de línea */
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+    overflow-x: auto;                /* scroll horizontal si no caben */
+    -webkit-overflow-scrolling: touch; /* scroll suave en móviles */
+    padding-bottom: 10px;            /* para que no se corte sombra en scroll */
+}
+
+/* ====== Cada artículo ====== */
+.PROYECTOS article {
+    flex: 0 0 350px;  /* ancho fijo, no crece ni encoge */
+    background: rgb(44, 43, 43);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ====== Imagen dentro del artículo ====== */
+.PROYECTOS article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* ====== Hover efectos ====== */
+.PROYECTOS article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.PROYECTOS article:hover img {
+    transform: scale(1.05);
+}
+
+/* ====== Títulos ====== */
+.PROYECTOS h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #c0b7a6;
+    text-align: center;
+}
+
+/* ====== Texto dentro de artículos ====== */
+.PROYECTOS p {
+    color: #E3DAC9;
+    text-align: center;
+
+}
+
+/* ====== Listas dentro de artículos ====== */
+.PROYECTOS li {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: #E3DAC9;
+}
+
+/* ====== Footer mejorado ====== */
+footer {
+    background: #1e5799; /* Fallback */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Saf4+, Chrome */
+    background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+    background: -o-linear-gradient(top, #1e5799, #7db9e8); /* Opera 11.10+ */
+    background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%); /* Standard */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 1em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer p {
+    margin: 0;
+    flex: 1 1 300px;
+}
+
+
+
+/* ====== Media queries para móvil ====== */
+@media screen and (max-width: 768px) {
+    .PROYECTOS {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-x: visible; /* sin scroll horizontal en móvil */
+        max-width: 90%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+
+    .PROYECTOS article {
+        width: 100%;
+        max-width: 400px;
+        flex: none; /* elimina el flex fijo para que ocupe todo */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .PROYECTOS {
+        flex-direction: row;       /* Mantener en fila */
+        flex-wrap: nowrap;         /* Sin salto de línea */
+        justify-content: center;   /* Centrar contenido */
+        overflow-x: auto;          /* Scroll horizontal si no caben */
+        max-width: 100%;           /* Para que ocupe todo el ancho posible */
+        margin: 20px auto;
+        gap: 20px;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en móviles */
+    }
+
+    .PROYECTOS article {
+        flex: 0 0 300px;           /* Tamaño fijo para que quepan 3 artículos */
+        max-width: 300px;
+    }
+}
